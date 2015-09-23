@@ -42,7 +42,7 @@ footer {
   <tr><td> 
   <td>
     <%= link_to 'My Blog', controller: 'blogs' %>
- &nbsp;&nbsp;&nbsp;<%= link_to 'aboutme', 'profile/aboutme' , {:style=>'color:yellow'} %> <font color= "red" size="5px">About me..!!!</font> </a>
+ &nbsp;&nbsp;&nbsp;<%= link_to 'aboutme', 'profile/aboutme' , {:style=>'color:yellow  text-decoration:none text-size:5px'} %> <font color= "red" size="5px">About me..!!!</font> </a>
   </td> 
   <td>
 &nbsp;&nbsp;&nbsp;<%= link_to '2048','game/index' %><font color= "green" size="5px" >Play 2048..!!!</font></a></td>
@@ -57,7 +57,7 @@ footer {
 </body>	
 <footer>
   <p>Posted by: Aakash</p>
-  <p>Contact information: <%= link_to 'contact me', profile/contactme ><font color="blue"><strong>CONTACT ME</strong></font></a></p>
+  <p>Contact information: <%= link_to 'contact me', 'contacts/index' %><font color="blue"><strong>CONTACT ME</strong></font></a></p>
 </footer>
 
 </html>

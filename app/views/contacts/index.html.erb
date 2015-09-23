@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head><title>Aakash Tiwari</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js">
+</script>
+<script>
+$(document).ready(function(){
+$(".form").validate({
+  rules: {
+    name: {
+      required:true,
+      minlenght:5
+          },
+
+    message: {
+      required:true,
+      minlength:10 
+          },
+
+    mob:  {
+      required:true,
+      minlength:10,
+      maxlength:10 
+    },
+    email: {
+      required: true,
+      email: true
+    }
+    
+  },
+  messages: {
+    name: "Please specify your name",
+    message: "you should not left the message block blank",
+    mob:"enter valid mobile number of 10 digit",
+    email: {
+      required: "We need your email address to contact you",
+      email: "Your email address must be in the format of name@domain.com"
+     }
+    }
+  })
+})</script>
+	<style>
+h1 { text-align: center;
+    color: #6495ed;
+}
+h2 {
+    color: #6495de;
+}
+
+p {
+    color: black;
+}
+
+ footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:100px;   /* Height of the footer */
+  
+}
+#container {
+   height:100%;
+}
+div {
+  font-size: 20px; 
+  text-align: center; 
+  margin: 5px 3px 0 0; 
+  margin: 75px 0 0 0;
+  float: left; 
+  width: 508px; 
+  height:200px; 
+  border-radius:2px; 
+  font-family: "Comic Sans MS", cursive;
+  background-color: blue ;
+  color:#FFF; 
+}
+label {
+    color: green;
+    display:block;
+    margin-top:20px;
+    letter-spacing:2px;
+}
+.body {
+    display:block;
+    margin:0 auto;
+    width:576px;
+}
+
+/* Centre the form within the page */
+form {
+    margin:0 auto;
+    width:459px;
+}
+
+/* Style the text boxes */
+input, textarea {
+    width:439px;
+    height:27px;
+    background:#efefef;
+    border:1px solid #dedede;
+    padding:10px;
+    margin-top:3px;
+    font-size:0.9em;
+    color:#3a3a3a;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;}
+
+input:focus, textarea:focus {
+    border:1px solid #97d6eb;
+}
+textarea {
+  height:213px;
+  background:url(images/textarea-bg.jpg) right no-repeat #efefef;
+}
+</style>
+	<h1 >Aakash Tiwari</h1>
+</head>
+
+<body>
+<h2><marquee>Welcome to Aakash's Tiwari Webpage.....</marquee></h2>
+<table style="margin:auto">
+  <tr><td> 
+<a href="index.html"style="text-decoration:none"><font color= "blue" size="5px">Home</font></a> </p1></td>
+  <td>
+ &nbsp;&nbsp;&nbsp;<a href="aboutme.html" style="text-decoration:none"> <font color= "red" size="5px">About me..!!!</font> </a>
+  </td> 
+  <td>
+&nbsp;&nbsp;&nbsp;<a href="2048/index.html" style="text-decoration:none"><font color= "green" size="5px" >Play 2048..!!!</font></a></td>
+  <td> 
+&nbsp;&nbsp;&nbsp;<a href="2584/index.html" style="text-decoration:none"><font color= "yellow" size="5px">Play 2584!!!</font></a> </p1></td>
+<td> 
+&nbsp;&nbsp;&nbsp;<a href="floodcolor/index.html" style="text-decoration:none"><font color= "violet" size="5px">Play Flood Colour!!!</font></a></td>
+</tr></table>
+
+<hr>
+<%= link_to 'Contact Me', new_contact_path %>
+</body>	
+<footer>
+  <p>Posted by: Aakash</p>
+   <a href="index.html"><font color="Green">Go to home page</font></a>
+</footer>
+
+</html>

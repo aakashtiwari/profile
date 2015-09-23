@@ -31,14 +31,16 @@ def update
 		render 'edit'
 	end
 end
-def destroy
-	@blog =Blog.find(params[:id])
-	@blog.destroy
-	redirect_to articles_path
-end
+
 def show
 
   @blog = Blog.find(params[:id])
+end
+
+def destroy
+	@blog =Blog.find(params[:id])
+	@blog.destroy
+	redirect_to blogs_path
 end
  
 private

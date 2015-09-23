@@ -128,7 +128,7 @@ textarea {
  &nbsp;&nbsp;&nbsp;<a href="aboutme.html" style="text-decoration:none"> <font color= "red" size="5px">About me..!!!</font> </a>
   </td> 
   <td>
-&nbsp;&nbsp;&nbsp;<a href="2048/index.html" style="text-decoration:none"><font color= "green" size="5px" >Play 2048..!!!</font></a></td>
+&nbsp;&nbsp;&nbsp;<%= link_to '2048','/game/index' %><font color= "green" size="5px" >Play 2048..!!!</font></a></td>
   <td> 
 &nbsp;&nbsp;&nbsp;<a href="2584/index.html" style="text-decoration:none"><font color= "yellow" size="5px">Play 2584!!!</font></a> </p1></td>
 <td> 
@@ -136,23 +136,7 @@ textarea {
 </tr></table>
 
 <hr>
-<form class="form">
-        
-    <label>Name</label>
-    <input name="name" type="name" placeholder="Type Here">
-            
-    <label>Email</label>
-    <input name="email" type="email" placeholder="Type Here">
-
-    <label>Mobile Number</label>
-    <input name="mob" type="number" placeholder="Type Here">
-            
-    <label>Message</label>
-    <textarea name="message" placeholder="Type Here"></textarea>
-            
-    <input id="submit" name="submit" type="submit" value="Submit">
-        
-</form>
+<%= render 'form' %>
 </body>	
 <footer>
   <p>Posted by: Aakash</p>

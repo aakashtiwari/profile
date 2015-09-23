@@ -5,8 +5,11 @@ Rails.application.routes.draw do
   get 'game/index' => 'game#index'
   get 'game2/index' => 'game2#index'
   get 'game3/index' => 'game3#index'
+  get 'contacts/index'=> 'contacts#index'
 
-  resources :profile 
+
+  resources :profile
+  resources :contacts
   resources :blogs do 
     resources :comments
   end
