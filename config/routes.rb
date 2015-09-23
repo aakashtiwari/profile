@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   get 'game2/index' => 'game2#index'
   get 'game3/index' => 'game3#index'
 
-  resources :profile ,:blog
+  resources :profile 
+  resources :blogs do 
+    resources :comments
+  end
   root 'profile#index'
 
 
