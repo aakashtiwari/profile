@@ -2,9 +2,11 @@ Rails.application.routes.draw do
   get 'profile/aboutme'
   get 'profile/contact'
   get 'profile/index'
-  get 'profile/2048/index'
+  get 'game/index' => 'game#index'
+  get 'game2/index' => 'game2#index'
+  get 'game3/index' => 'game3#index'
 
-  resources :profile
+  resources :profile ,:blog
   root 'profile#index'
 
 
