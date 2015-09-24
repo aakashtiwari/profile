@@ -41,11 +41,12 @@ footer {
  <td>&nbsp;&nbsp;&nbsp;<%= link_to 'Home', '/profile/index' , {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %>  
   </td> 
   <td>
-&nbsp;&nbsp;&nbsp;<%= link_to '2048','/game/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
+&nbsp;&nbsp;&nbsp;<%= link_to 'Play 2048','/game/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
   <td> 
 &nbsp;&nbsp;&nbsp;<%= link_to 'Play 2584','/game2/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
 <td> 
 &nbsp;&nbsp;&nbsp;<%= link_to 'Play Flood Color','/game3/index', {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %></td>
+<td>&nbsp;&nbsp;&nbsp;<%= link_to 'Contact me', '/contacts/index',{:style=>'color:green;  text-decoration:none ;font-size:25px;'} %></td>
 </tr></table>
 
 <hr>
@@ -53,7 +54,7 @@ Your score was 84
 </body>	
 <footer>
   <p>Posted by: Aakash</p>
-  <p> <a href="../index.html">home page</a>.</p>
+  <%= link_to 'Go to Home', '/profile/index' , {:style=>'color:red;  text-decoration:none ;font-size:15px;'} %>
 </footer>
 
 </html>

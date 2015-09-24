@@ -15,15 +15,16 @@
 </head>
 <body><table style="margin:auto">
   <tr><td> 
-    <%= link_to 'My Blog', controller: 'blogs'  %></td>
+    <%= link_to 'My Blog', controller: 'blogs'  %></td><td>&nbsp;&nbsp;&nbsp; <%= link_to 'Home', '/profile/index' , {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %> 
  <td>&nbsp;&nbsp;&nbsp;<%= link_to 'Aboutme', '/profile/aboutme' , {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %>  
   </td> 
   <td>
-&nbsp;&nbsp;&nbsp;<%= link_to '2048','/game/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
+&nbsp;&nbsp;&nbsp;<%= link_to 'Play 2048','/game/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
   <td> 
 &nbsp;&nbsp;&nbsp;<%= link_to 'Play 2584','/game2/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
 <td> 
 &nbsp;&nbsp;&nbsp;<%= link_to 'Play Flood Color','/game3/index', {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %></td>
+<td>&nbsp;&nbsp;&nbsp;<%= link_to 'Contact me', '/contacts/index',{:style=>'color:green;  text-decoration:none ;font-size:25px;'} %></td>
 </tr></table>
 
 <hr>
@@ -183,17 +184,7 @@
   <%= javascript_include_tag "js3/local_storage_manager" %>
   <%= javascript_include_tag "js3/game_manager" %>
   <%= javascript_include_tag "js3/application" %>
-  <script src="js/flood-game.js"></script>
-  <script src="js/bind_polyfill.js"></script>
-  <script src="js/classlist_polyfill.js"></script>
-  <script src="js/animframe_polyfill.js"></script>
-  <script src="js/keyboard_input_manager.js"></script>
-  <script src="js/html_actuator.js"></script>
-  <script src="js/grid.js"></script>
-  <script src="js/tile.js"></script>
-  <script src="js/local_storage_manager.js"></script>
-  <script src="js/game_manager.js"></script>
-  <script src="js/application.js"></script>
+  
    <script> window.onload =new_game (); </script>
 </body>
 </html>

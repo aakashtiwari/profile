@@ -88,22 +88,23 @@ textarea {
 <h2><marquee>Welcome to Aakash's Tiwari Webpage.....</marquee></h2>
 <table style="margin:auto">
   <tr><td> 
-    <%= link_to 'My Blog', controller: 'blogs'  %></td>
+    <%= link_to 'My Blog', controller: 'blogs'  %></td><td>&nbsp;&nbsp;&nbsp; <%= link_to 'Home', '/profile/index' , {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %> 
  <td>&nbsp;&nbsp;&nbsp;<%= link_to 'Aboutme', '/profile/aboutme' , {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %>  
   </td> 
   <td>
-&nbsp;&nbsp;&nbsp;<%= link_to '2048','/game/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
+&nbsp;&nbsp;&nbsp;<%= link_to 'Play 2048','/game/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
   <td> 
 &nbsp;&nbsp;&nbsp;<%= link_to 'Play 2584','/game2/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
 <td> 
 &nbsp;&nbsp;&nbsp;<%= link_to 'Play Flood Color','/game3/index', {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %></td>
+<td>&nbsp;&nbsp;&nbsp;<%= link_to 'Contact me', '/contacts/index',{:style=>'color:green;  text-decoration:none ;font-size:25px;'} %></td>
 </tr></table>
 <hr>
-<%= link_to 'Contact Me', new_contact_path %>
+<%= link_to 'Click To Fill Your Details', new_contact_path %>
 </body>	
 <footer>
-  <p>Posted by: Aakash</p>
-   <a href="index.html"><font color="Green">Go to home page</font></a>
+  
+  <%= link_to 'Go to Home', '/profile/index' , {:style=>'color:red;  text-decoration:none ;font-size:15px;'} %>
 </footer>
 
 </html>
