@@ -13,16 +13,15 @@
 </head>
 <body><table style="margin:auto">
   <tr><td> 
-<a href="../index.html"style="text-decoration:none"><font color= "blue" size="5px">Home</font></a> </p1></td>
-  <td>
- &nbsp;&nbsp;&nbsp;<a href="../aboutme.html" style="text-decoration:none"> <font color= "red" size="5px">About me..!!!</font> </a>
+    <%= link_to 'My Blog', controller: 'blogs'  %></td>
+ <td>&nbsp;&nbsp;&nbsp;<%= link_to 'Aboutme', '/profile/aboutme' , {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %>  
   </td> 
   <td>
-&nbsp;&nbsp;&nbsp;<a href="../2048/index.html" style="text-decoration:none"><font color= "green" size="5px" >Play 2048..!!!</font></a></td>
+&nbsp;&nbsp;&nbsp;<%= link_to '2048','/game/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
   <td> 
-&nbsp;&nbsp;&nbsp;<a href="index.html" style="text-decoration:none"><font color= "orange" size="5px">Play 2584!!!</font></a> </p1></td>
+&nbsp;&nbsp;&nbsp;<%= link_to 'Play 2584','/game2/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
 <td> 
-&nbsp;&nbsp;&nbsp;<a href="../floodcolor/index.html" style="text-decoration:none"><font color= "violet" size="5px">Play Flood Colour!!!</font></a></td>
+&nbsp;&nbsp;&nbsp;<%= link_to 'Play Flood Color','/game3/index', {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %></td>
 </tr></table>
 
 <hr>
@@ -91,17 +90,17 @@
    Created by Aakash Tiwari <a href= ../index.html>Go to Home Page</a>
     </p>
   </div>
-
-  <script src="js/bind_polyfill.js"></script>
-  <script src="js/classlist_polyfill.js"></script>
-  <script src="js/animframe_polyfill.js"></script>
-  <script src="js/keyboard_input_manager.js"></script>
-  <script src="js/html_actuator.js"></script>
-  <script src="js/grid.js"></script>
-  <script src="js/tile.js"></script>
-  <script src="js/local_storage_manager.js"></script>
-  <script src="js/game_manager.js"></script>
-  <script src="js/application.js"></script>
+  <%= javascript_include_tag "js2/bind_polyfill" %>
+  <%= javascript_include_tag "js2/classlist_polyfill" %>
+  <%= javascript_include_tag "js2/animframe_polyfill" %>
+  <%= javascript_include_tag "js2/keyboard_input_manager" %>
+  <%= javascript_include_tag "js2/html_actuator" %>
+  <%= javascript_include_tag "js2/grid" %>
+  <%= javascript_include_tag "js2/tile" %>
+  <%= javascript_include_tag "js2/local_storage_manager" %>
+  <%= javascript_include_tag "js2/game_manager" %>
+  <%= javascript_include_tag "js2/application" %>
+ 
   <script> window.onload =function() {
    MyGame.restart(); 
   }; </script>

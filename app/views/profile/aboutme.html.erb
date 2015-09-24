@@ -49,16 +49,15 @@ div {
 <h2><marquee>Welcome to Aakash's Tiwari Webpage.....</marquee></h2>
  <table style="margin:auto">
   <tr><td> 
-<a href="index.html"style="text-decoration:none"><font color= "blue" size="5px">Home</font></a> </p1></td>
-  <td>
- &nbsp;&nbsp;&nbsp;<a href="aboutme.html" style="text-decoration:none"> <font color= "red" size="5px">About me..!!!</font> </a>
+    <%= link_to 'My Blog', controller: 'blogs'  %></td>
+ <td>&nbsp;&nbsp;&nbsp;<%= link_to 'Home', '/profile/index' , {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %>  
   </td> 
   <td>
-&nbsp;&nbsp;&nbsp;<a href="2048/index.html" style="text-decoration:none"><font color= "green" size="5px" >Play 2048..!!!</font></a></td>
+&nbsp;&nbsp;&nbsp;<%= link_to '2048','/game/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
   <td> 
-&nbsp;&nbsp;&nbsp;<a href="2584/index.html" style="text-decoration:none"><font color= "yellow" size="5px">Play 2584!!!</font></a> </p1></td>
+&nbsp;&nbsp;&nbsp;<%= link_to 'Play 2584','/game2/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
 <td> 
-&nbsp;&nbsp;&nbsp;<a href="floodcolor/index.html" style="text-decoration:none"><font color= "violet" size="5px">Play Flood Colour!!!</font></a></td>
+&nbsp;&nbsp;&nbsp;<%= link_to 'Play Flood Color','/game3/index', {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %></td>
 </tr></table>
 
 <hr>
@@ -69,9 +68,9 @@ div {
      </p></div> 
 
 
-My <a href="academics/sem1.html"> <font color="red">sem 1 score</font></a>
-My <a href="academics/sem2.html"> <font color="green">sem 2 score</font></a>
-My <a href="academics/sem3.html"> <font color="yellow">sem 3 score</font></a>  
+ <%= link_to 'My Sem1 score','/profile/sem1' ,{:style=>'color:red;  text-decoration:none ;font-size:16px;'}%>
+ &nbsp;&nbsp;&nbsp;<%= link_to 'My Sem2 score','/profile/sem2' ,{:style=>'color:red;  text-decoration:none ;font-size:16px;'}%>
+ &nbsp;&nbsp;&nbsp;<%= link_to 'My Sem3 score','/profile/sem3' ,{:style=>'color:red;  text-decoration:none ;font-size:16px;'}%> 
 <img src=https://trcs.wikispaces.com/file/view/che_guevara.jpg/41147947/che_guevara.jpg width="300" height="400" align="right"/>
 </body>	
 <footer>

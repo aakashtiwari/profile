@@ -15,16 +15,15 @@
 </head>
 <body><table style="margin:auto">
   <tr><td> 
-<a href="../index.html"style="text-decoration:none"><font color= "blue" size="5px">Home</font></a> </p1></td>
-  <td>
- &nbsp;&nbsp;&nbsp;<a href="../aboutme.html" style="text-decoration:none"> <font color= "red" size="5px">About me..!!!</font> </a>
+    <%= link_to 'My Blog', controller: 'blogs'  %></td>
+ <td>&nbsp;&nbsp;&nbsp;<%= link_to 'Aboutme', '/profile/aboutme' , {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %>  
   </td> 
   <td>
-&nbsp;&nbsp;&nbsp;<a href="../2048/index.html" style="text-decoration:none"><font color= "green" size="5px" >Play 2048..!!!</font></a></td>
+&nbsp;&nbsp;&nbsp;<%= link_to '2048','/game/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
   <td> 
-&nbsp;&nbsp;&nbsp;<a href="../2584/index.html" style="text-decoration:none"><font color= "neon" size="5px">Play 2584!!!</font></a> </p1></td>
+&nbsp;&nbsp;&nbsp;<%= link_to 'Play 2584','/game2/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
 <td> 
-&nbsp;&nbsp;&nbsp;<a href="index.html" style="text-decoration:none"><font color= "violet" size="5px">Play Flood Colour!!!</font></a></td>
+&nbsp;&nbsp;&nbsp;<%= link_to 'Play Flood Color','/game3/index', {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %></td>
 </tr></table>
 
 <hr>
@@ -173,7 +172,17 @@
     <hr>
     
   </div>
-
+  <%= javascript_include_tag "js3/flood-game" %>
+  <%= javascript_include_tag "js3/bind_polyfill" %>
+  <%= javascript_include_tag "js3/classlist_polyfill" %>
+  <%= javascript_include_tag "js3/animframe_polyfill" %>
+  <%= javascript_include_tag "js3/keyboard_input_manager" %>
+  <%= javascript_include_tag "js3/html_actuator" %>
+  <%= javascript_include_tag "js3/grid" %>
+  <%= javascript_include_tag "js3/tile" %>
+  <%= javascript_include_tag "js3/local_storage_manager" %>
+  <%= javascript_include_tag "js3/game_manager" %>
+  <%= javascript_include_tag "js3/application" %>
   <script src="js/flood-game.js"></script>
   <script src="js/bind_polyfill.js"></script>
   <script src="js/classlist_polyfill.js"></script>

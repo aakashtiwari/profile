@@ -40,16 +40,15 @@ footer {
 <table> 
 <table style="margin:auto">
   <tr><td> 
-  <td>
-    <%= link_to 'My Blog', controller: 'blogs' %>
- &nbsp;&nbsp;&nbsp;<%= link_to 'aboutme', 'profile/aboutme' , {:style=>'color:yellow  text-decoration:none text-size:5px'} %> <font color= "red" size="5px">About me..!!!</font> </a>
+    <%= link_to 'My Blog', controller: 'blogs'  %></td>
+ <td>&nbsp;&nbsp;&nbsp;<%= link_to 'Aboutme', '/profile/aboutme' , {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %>  
   </td> 
   <td>
-&nbsp;&nbsp;&nbsp;<%= link_to '2048','game/index' %><font color= "green" size="5px" >Play 2048..!!!</font></a></td>
+&nbsp;&nbsp;&nbsp;<%= link_to '2048','/game/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
   <td> 
-&nbsp;&nbsp;&nbsp;<%= link_to 'Play 2584','game2/index' ,{:style=>'text-decoration:none'} %><font color= "yellow" size="5px">Play 2584!!!</font></a> </p1></td>
+&nbsp;&nbsp;&nbsp;<%= link_to 'Play 2584','/game2/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
 <td> 
-&nbsp;&nbsp;&nbsp;<%= link_to 'Play Flood Color','game3/index', {:style=>'text-decoration:none'} %><font color= "violet" size="5px">Play Flood Colour!!!</font></a></td>
+&nbsp;&nbsp;&nbsp;<%= link_to 'Play Flood Color','/game3/index', {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %></td>
 </tr></table>
 
 <hr>
@@ -57,7 +56,7 @@ footer {
 </body>	
 <footer>
   <p>Posted by: Aakash</p>
-  <p>Contact information: <%= link_to 'contact me', 'contacts/index' %><font color="blue"><strong>CONTACT ME</strong></font></a></p>
+  <p>Contact information: <%= link_to 'contact me', 'contacts/index',{:style=>'color:green;  text-decoration:none ;font-size:25px;'} %></p>
 </footer>
 
 </html>
