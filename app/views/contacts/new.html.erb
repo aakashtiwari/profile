@@ -43,6 +43,9 @@ $(".form").validate({
 })</script>
 
 	<style>
+  body {
+   background-image: url(<%= asset_path 'ghost.jpg' %>)
+ }
 h1 { text-align: center;
     color: #6495ed;
 }
@@ -78,7 +81,7 @@ div {
   color:#FFF; 
 }
 label {
-    color: green;
+    color:#808000;
     display:block;
     margin-top:20px;
     letter-spacing:2px;
@@ -91,20 +94,25 @@ label {
 
 /* Centre the form within the page */
 form {
+    
     margin:0 auto;
-    width:459px;
+    width:359px;
 }
+#p1{
+  font-size:20px;
+  color:gray;
 
+}
 /* Style the text boxes */
 input, textarea {
-    width:439px;
-    height:27px;
-    background:#efefef;
-    border:1px solid #dedede;
-    padding:10px;
-    margin-top:3px;
+    width:339px;
+    height:32px;
+    background-color:rgba(0,0,0,0) !important;
+    border:2px solid gray; 
+    padding:8px;
+    margin-top:1px;
     font-size:0.9em;
-    color:#3a3a3a;
+    color:gray;
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
     border-radius:5px;}
@@ -113,7 +121,7 @@ input:focus, textarea:focus {
     border:1px solid #97d6eb;
 }
 textarea {
-  height:213px;
+  height:200px;
   background:url(images/textarea-bg.jpg) right no-repeat #efefef;
 }
 </style>
@@ -124,7 +132,7 @@ textarea {
 <h2><marquee>Welcome to Aakash's Tiwari Webpage.....</marquee></h2>
 <nav class="navbar navbar-inverse">
       <ul class="nav navbar-nav">
-        <li><%= link_to 'My Blog', 'blogs' ,{:style=>'color: #FF00FF;  text-decoration:none ;font-size:25px;'} %></li>
+        <li><%= link_to 'My Blog', '/blogs' ,{:style=>'color: #FF00FF;  text-decoration:none ;font-size:25px;'} %></li>
         <li><%= link_to 'Home', '/home' ,{:style=>'color:#3366FF;  text-decoration:none ;font-size:25px;'} %></li>
         
         <li><%= link_to 'AboutMe', '/aboutme' , {:style=>'color:#FF0099;  text-decoration:none ;font-size:25px;'} %></li>  
@@ -135,11 +143,12 @@ textarea {
 </ul>
 </nav>
 <hr>
+
 <%= render 'form' %>
+
 </body>	
 <footer>
-  
-  <%= link_to 'Go to Home', '/profile/index' , {:style=>'color:red;  text-decoration:none ;font-size:15px;'} %>
+
 </footer>
 
 </html>

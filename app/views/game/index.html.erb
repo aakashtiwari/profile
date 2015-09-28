@@ -18,8 +18,8 @@ color: blue;
 font-size: 20px;
 }
 body {
-    background-image: url("background.jpg");
-}
+   background-image: url(<%= asset_path '14.jpg' %>)
+ }
 footer {
    position:absolute;
    bottom:0;
@@ -44,7 +44,7 @@ footer {
         
         <li><%= link_to 'AboutMe', '/aboutme' , {:style=>'color:#FF0099;  text-decoration:none ;font-size:25px;'} %></li>  
 
-        <li><%= link_to 'Games', 'game',{:style=>'color:#9FAA11;  text-decoration:none ;font-size:25px;'} %></li>
+        <li><%= link_to 'Games', '/game',{:style=>'color:#9FAA11;  text-decoration:none ;font-size:25px;'} %></li>
 
         <li><%= link_to 'Contact Me', '/contacts',{:style=>'color:#B12222;  text-decoration:none ;font-size:25px;'} %></li>
 </ul>

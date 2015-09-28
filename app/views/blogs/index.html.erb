@@ -7,8 +7,20 @@
 </script>
 
   <style>
+  #td1{
+    font-size:20px;
+    color:#2FB2AA;
+  }
+  #td2{
+    font-size:20px;
+    color:#20B2AA;
+  }
+  body {
+   background-image: url(<%= asset_path 'Cool.jpg' %>);
+  
+ }
 h1 { text-align: center;
-    color: #6495ed;
+    color: #87CEFA;
 }
 h2 {
     color: #6495de;
@@ -100,7 +112,7 @@ textarea {
 </nav>
 <hr>
 <h1>Listing Blogs</h1>
- <%= link_to 'New blog', new_blog_path %>
+ <button  class="btn btn-warning"><%= link_to 'New blog', new_blog_path %></button>
 <table class="table table-striped">
   <tr>
     <th>Title</th>
@@ -110,8 +122,8 @@ textarea {
  
   <% @blogs.each do |blog| %>
     <tr>
-      <td><%= blog.title %></td>
-      <td><%= blog.body %></td>
+      <td id='td1'><%= blog.title %></td>
+      <td id='td2'><%= blog.body %></td>
       <td><%= link_to 'Show', blog_path(blog) %></td>
       <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
       <td><%= link_to 'Destroy', blog_path(blog),
@@ -121,9 +133,6 @@ textarea {
   <% end %>
 </table>
 </body> 
-<footer>
-  <p>Posted by: Aakash</p>
-   <a href="index.html"><font color="Green">Go to home page</font></a>
-</footer>
+
 
 </html>

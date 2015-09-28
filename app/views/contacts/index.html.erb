@@ -7,6 +7,9 @@
 </script>
 
 	<style>
+  body {
+   background-image: url(<%= asset_path '12.jpg' %>)
+ }
 h1 { text-align: center;
     color: #6495ed;
 }
@@ -103,7 +106,6 @@ textarea {
 </body>	
 <footer>
   
-  <%= link_to 'Go to Home', '/profile/index' , {:style=>'color:red;  text-decoration:none ;font-size:15px;'} %>
 </footer>
 
 </html>
