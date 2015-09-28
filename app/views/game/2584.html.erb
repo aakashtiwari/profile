@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>2584</title>
+ <%= stylesheet_link_tag "style/main" %>
+  
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'My Blog', 'blogs' ,{:style=>'color: #FF00FF;  text-decoration:none ;font-size:25px;'} %></li>
+        <li><%= link_to 'Home', '/home' ,{:style=>'color:#3366FF;  text-decoration:none ;font-size:25px;'} %></li>
+        
+        <li><%= link_to 'AboutMe', '/aboutme' , {:style=>'color:#FF0099;  text-decoration:none ;font-size:25px;'} %></li>  
+
+        <li><%= link_to 'Games', '/game',{:style=>'color:#9FAA11;  text-decoration:none ;font-size:25px;'} %></li>
+
+        <li><%= link_to 'Contact Me', '/contacts',{:style=>'color:#B12222;  text-decoration:none ;font-size:25px;'} %></li>
+</ul>
+</nav>
+<hr>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">2584</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+
+    <div class="above-game">
+      <p class="game-intro">Join the numbers and get to the <strong>2548 tile!</strong></p>
+      <a class="restart-button">New Game</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Keep going</a>
+          <a class="retry-button">Try again</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+    </p>
+    <hr>
+    
+    <hr>
+    <p>
+   
+  <p>created by: Aakash</p>
+ 
+    </p>
+  </div>
+  <%= javascript_include_tag "js2/bind_polyfill" %>
+  <%= javascript_include_tag "js2/classlist_polyfill" %>
+  <%= javascript_include_tag "js2/animframe_polyfill" %>
+  <%= javascript_include_tag "js2/keyboard_input_manager" %>
+  <%= javascript_include_tag "js2/html_actuator" %>
+  <%= javascript_include_tag "js2/grid" %>
+  <%= javascript_include_tag "js2/tile" %>
+  <%= javascript_include_tag "js2/local_storage_manager" %>
+  <%= javascript_include_tag "js2/game_manager" %>
+  <%= javascript_include_tag "js2/application" %>
+ 
+  <script> window.onload =function() {
+   MyGame.restart(); 
+  }; </script>
+</body>
+</html>

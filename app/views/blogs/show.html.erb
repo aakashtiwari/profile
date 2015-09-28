@@ -1,17 +1,17 @@
+ <p>
+  <nav class="navbar navbar-inverse">
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'My Blog', 'blogs' ,{:style=>'color: #FF00FF;  text-decoration:none ;font-size:25px;'} %></li>
+        <li><%= link_to 'Home', '/home' ,{:style=>'color:#3366FF;  text-decoration:none ;font-size:25px;'} %></li>
+        
+        <li><%= link_to 'AboutMe', '/aboutme' , {:style=>'color:#FF0099;  text-decoration:none ;font-size:25px;'} %></li>  
+
+        <li><%= link_to 'Games', 'game',{:style=>'color:#9FAA11;  text-decoration:none ;font-size:25px;'} %></li>
+
+        <li><%= link_to 'Contact Me', '/contacts',{:style=>'color:#B12222;  text-decoration:none ;font-size:25px;'} %></li>
+</ul>
+</nav>
  </p>
- <table style="margin:auto">
-  <tr><td> 
-    <%= link_to 'My Blog', controller: 'blogs'  %></td><td>&nbsp;&nbsp;&nbsp; <%= link_to 'Home', '/profile/index' , {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %> 
- <td>&nbsp;&nbsp;&nbsp;<%= link_to 'Aboutme', '/profile/aboutme' , {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %>  
-  </td> 
-  <td>
-&nbsp;&nbsp;&nbsp;<%= link_to 'Play 2048','/game/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
-  <td> 
-&nbsp;&nbsp;&nbsp;<%= link_to 'Play 2584','/game2/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
-<td> 
-&nbsp;&nbsp;&nbsp;<%= link_to 'Play Flood Color','/game3/index', {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %></td>
-<td>&nbsp;&nbsp;&nbsp;<%= link_to 'Contact me', '/contacts/index',{:style=>'color:green;  text-decoration:none ;font-size:25px;'} %></td>
-</tr></table></p>
   <p>
   <strong>Title:</strong>
   <%= @blog.title %>

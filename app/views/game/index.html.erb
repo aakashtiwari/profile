@@ -1,112 +1,93 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>2048</title>
+<head><title>Aakash Tiwari</title>
+	<style>
+h1 {
+    color: #6495ed;
+}
+h2 {
+    color: #6495de;
+}
 
-   <%= stylesheet_link_tag "main" %>
-  <link rel="shortcut icon" href="favicon.ico">
+p {
+    color: white;
+}
 
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+p1{ 
+color: blue;
+font-size: 20px;
+}
+body {
+    background-image: url("background.jpg");
+}
+footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:100px;   /* Height of the footer */
+  
+}
+#container {
+   height:100%;
+}
+</style>
+	<title>Welcome to Aakash's Webpage</title>
 </head>
-<body><table style="margin:auto">
-  <tr><td> 
-    <%= link_to 'My Blog', controller: 'blogs'  %></td><td>&nbsp;&nbsp;&nbsp; <%= link_to 'Home', '/profile/index' , {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %> 
- <td>&nbsp;&nbsp;&nbsp;<%= link_to 'Aboutme', '/profile/aboutme' , {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %>  
-  </td> 
-  <td>
-&nbsp;&nbsp;&nbsp;<%= link_to 'Play 2048','/game/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
-  <td> 
-&nbsp;&nbsp;&nbsp;<%= link_to 'Play 2584','/game2/index' ,{:style=>'color:red;  text-decoration:none ;font-size:25px;'}%></td>
-<td> 
-&nbsp;&nbsp;&nbsp;<%= link_to 'Play Flood Color','/game3/index', {:style=>'color:red;  text-decoration:none ;font-size:25px;'} %></td>
-<td>&nbsp;&nbsp;&nbsp;<%= link_to 'Contact me', '/contacts/index',{:style=>'color:green;  text-decoration:none ;font-size:25px;'} %></td>
-</tr></table>
+
+<body>
+
+<h1 ><marquee><font size="40px">Welcome to Aakash's Tiwari Webpage.....</font></marquee></h1>
+<nav class="navbar navbar-inverse">
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'My Blog', 'blogs' ,{:style=>'color: #FF00FF;  text-decoration:none ;font-size:25px;'} %></li>
+        <li><%= link_to 'Home', '/home' ,{:style=>'color:#3366FF;  text-decoration:none ;font-size:25px;'} %></li>
+        
+        <li><%= link_to 'AboutMe', '/aboutme' , {:style=>'color:#FF0099;  text-decoration:none ;font-size:25px;'} %></li>  
+
+        <li><%= link_to 'Games', 'game',{:style=>'color:#9FAA11;  text-decoration:none ;font-size:25px;'} %></li>
+
+        <li><%= link_to 'Contact Me', '/contacts',{:style=>'color:#B12222;  text-decoration:none ;font-size:25px;'} %></li>
+</ul>
+</nav>
+
 
 <hr>
-  <div class="container">
-    <div class="heading">
-      <h1 class="title">2048</h1>
-      <div class="scores-container">
-        <div class="score-container">0</div>
-        <div class="best-container">0</div>
-      </div>
-    </div>
 
-    <div class="above-game">
-      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
-      <a class="restart-button">New Game</a>
-    </div>
-
-    <div class="game-container">
-      <div class="game-message">
-        <p></p>
-        <div class="lower">
-	        <a class="keep-playing-button">Keep going</a>
-          <a class="retry-button">Try again</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Lets Play</h2>
+                    <hr class="primary">
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="grid-container">
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="service-box">
+                
+                       <img src="img/portfolio/1.jpg" class="img-responsive" alt="">
+                        <li><%= link_to '2048', '/game/2048' ,{:style=>'color:#3366FF;  text-decoration:none ;font-size:25px;'} %></li>
+                        <p class="text-muted">Show Your Maths Skill</p>
+                    
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="service-box">
+                        <img src="img/portfolio/1.jpg" class="img-responsive" alt="">
+                        <li><%= link_to '2584', '/game/2584' ,{:style=>'color:#3366FF;  text-decoration:none ;font-size:25px;'} %></li>
+                        <p class="text-muted">Show Your Talent</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="service-box">
+                        <img src="img/portfolio/1.jpg" class="img-responsive" alt="">
+                        <li><%= link_to 'FloodColor', '/game/floodcolor' ,{:style=>'color:#3366FF;  text-decoration:none ;font-size:25px;'} %></li>
+                        <p class="text-muted">Show Your Colouring Skill</p>
+                </div>
+                
+            </div>
         </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-      </div>
-
-      <div class="tile-container">
-
-      </div>
-    </div>
-
-    <p class="game-explanation">
-      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
-    </p>
-    <hr>
     
-    <hr>
-    <p>
-  
-  <p>Created by: Aakash</p>
-  <%= link_to 'Go to Home', '/profile/index' , {:style=>'color:red;  text-decoration:none ;font-size:15px;'} %>
 
-    </p>
-  </div>
-
-  <%= javascript_include_tag "js1/bind_polyfill" %>
-  <%= javascript_include_tag "js1/classlist_polyfill" %>
-  <%= javascript_include_tag "js1/animframe_polyfill" %>
-  <%= javascript_include_tag "js1/keyboard_input_manager" %>
-  <%= javascript_include_tag "js1/html_actuator" %>
-  <%= javascript_include_tag "js1/grid" %>
-  <%= javascript_include_tag "js1/tile" %>
-  <%= javascript_include_tag "js1/local_storage_manager" %>
-  <%= javascript_include_tag "js1/game_manager" %>
-  <%= javascript_include_tag "js1/application" %>
-  <script> window.onload =function() {
-   MyGame.restart(); 
-  }; </script>
-</body>
 </html>

@@ -1,18 +1,25 @@
 Rails.application.routes.draw do
-  get 'profile/aboutme'
-  get 'profile/contact'
-  get 'profile/index'
-  get 'profile/sem1'
-  get 'profile/sem2'
-  get 'profile/sem3'
-  get 'game/index' => 'game#index'
-  get 'game2/index' => 'game2#index'
-  get 'game3/index' => 'game3#index'
-  get 'contacts/index'=> 'contacts#index'
   
 
-  resources :profile
+  get 'profile/index'
+  get 'aboutme/sem1' 
+  get 'aboutme/sem2' 
+  get 'aboutme/sem3'
+  get 'game/2048' 
+  get 'game/2584' 
+  get 'game/floodcolor' 
+  get 'contacts/index'=> 'contacts#index'
+  
+  resources :game
+  scope(path_names: { new: '',  })do
+  resources :profile , path:'home'
+  end
+  scope(path_names: { new: '', })do
+  resources :aboutme 
+  end
+  scope(path_names: { index: '', }) do
   resources :contacts
+  end
   resources :blogs do 
     resources :comments
   end
